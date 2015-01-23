@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.java.vjezbe.controller.PosudbeCasopisaController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane layoutX="132.0" layoutY="3.0" prefHeight="60.0" prefWidth="448.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="70.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="0.0" prefWidth="354.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#dohvatiPosudbeCasopisa" prefHeight="25.0" prefWidth="150.0" text="Dohvati posudbe" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label prefHeight="17.0" prefWidth="91.0" text="Naziv casopisa : " />
+                  <TextField fx:id="nazivPosudbaCasopis" prefHeight="25.0" prefWidth="299.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="posudbaCasopisTable" layoutY="-121.0" prefHeight="321.0" prefWidth="593.0">
+              <columns>
+                <TableColumn fx:id="nazivCasopisaColumn" prefWidth="250.0" text="Naziv casopisa" />
+                <TableColumn fx:id="prezimeKorisnikaColumn" prefWidth="100.0" text="Prezime korisnika" />
+                  <TableColumn fx:id="imeKorisnikaColumn" prefWidth="100.0" text="Ime korisnika" />
+                  <TableColumn fx:id="datumPosudbeColumn" prefWidth="150.0" text="Datum posudbe" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

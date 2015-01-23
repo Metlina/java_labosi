@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.java.vjezbe.controller.PosudbeKnjigaController">
+   <center>
+      <Pane prefHeight="88.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane layoutX="150.0" prefHeight="63.0" prefWidth="451.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="61.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="374.0" minWidth="10.0" prefWidth="374.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="106.0" text="Naziv knjige : " />
+                  <Button mnemonicParsing="false" onAction="#dohvatiPosudbeKnjige" prefHeight="25.0" prefWidth="150.0" text="Dohvati posudbe" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="nazivPosudbaKnjiga" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="posudbaKnjigaTable" layoutY="-133.0" prefHeight="333.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="nazivKnjigeColumn" prefWidth="250.0" text="Naziv knjige" />
+                <TableColumn fx:id="prezimeKorisnikaColumn" prefWidth="100.0" text="Prezime korisnika" />
+                  <TableColumn fx:id="imeKorisnikaColumn" minWidth="0.0" prefWidth="100.0" text="Ime korisnika" />
+                  <TableColumn fx:id="datumPosudbeColumn" prefWidth="150.0" text="Datum posudbe" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

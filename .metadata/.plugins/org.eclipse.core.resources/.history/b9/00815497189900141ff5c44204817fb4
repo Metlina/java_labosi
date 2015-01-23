@@ -1,0 +1,33 @@
+package hr.tvz.java.vjezbe.visenitnost;
+
+import hr.tvz.java.vjezbe.glavna.Main;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.concurrent.ExecutorService;
+
+import javafx.scene.control.Label;
+
+public class DatumVrijemeNit implements Runnable {
+
+	private Label label;
+	private ExecutorService executorService;
+	private LocalDateTime vrijeme;
+	
+	public DatumVrijemeNit(Label label, ExecutorService executorService) {
+		this.label = label;
+		this.executorService = executorService;
+	}
+
+	@Override
+	public void run() {
+		while (Main.getStanjeAplikacije())
+		{
+			//VisenitnostHelper.nitPauza(1);
+			this.vrijeme = LocalDateTime.now();
+			VisenitnostHelper.setLabelText(label, vrijeme.format(DateTimeFormatter.ofPattern("HH:mm:ss - dd:MM:yyyy.")));
+			VisenitnostHelper.nitPauza(1);
+		}
+		executorService.shutdown();
+	}
+}

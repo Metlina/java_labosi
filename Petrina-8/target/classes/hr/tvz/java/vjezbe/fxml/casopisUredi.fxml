@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.java.vjezbe.controller.CasopisUrediController">
+
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Naziv casopisa : " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Godina casopisa : " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Mjesec casopisa : " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Vrsta casopisa : " GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Broj stranica : " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="nazivCasopis" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="godinaCasopis" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="mjesecCasopisa" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="brStranicaCasopis" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <ComboBox fx:id="vrstaCasopisa" prefWidth="300.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#unesiCasopis" prefWidth="150.0" text="Unesi casopis" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

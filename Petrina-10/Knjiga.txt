@@ -1,0 +1,21 @@
+Programiranje u Javi
+1
+Skolska knjiga
+Hrvatska
+2014
+1
+700
+Web aplikacije u Javi
+1
+Element
+Hrvatska
+2014
+1
+800
+Thinking in C#
+1
+John Skeet
+SAD
+2012
+2
+800

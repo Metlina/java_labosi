@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.java.vjezbe.controller.GlavnaController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Knjige">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#prikaziKnjige" text="Pretrazivanje knjiga" />
+              <MenuItem mnemonicParsing="false" onAction="#novaKnjiga" text="Nova knjiga" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Casopisi">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#prikaziCasopise" text="Pretrazivanje casopisa" />
+              <MenuItem mnemonicParsing="false" onAction="#noviCasopis" text="Novi casopis" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Clanovi">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#prikaziClanove" text="Pretrazivanje clanova" />
+              <MenuItem mnemonicParsing="false" onAction="#noviClan" text="Novi clan" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Posudbe">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#posudbaKnjige" text="Knjige" />
+                  <MenuItem mnemonicParsing="false" onAction="#posudbaCasopisi" text="Casopisi" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

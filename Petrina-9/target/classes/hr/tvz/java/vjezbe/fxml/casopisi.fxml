@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.java.vjezbe.controller.CasopisiController">
+   <center>
+      <Pane prefHeight="63.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane alignment="CENTER" centerShape="false" layoutX="130.0" prefHeight="60.0" prefWidth="450.0" scaleShape="false">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="101.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="349.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#dohvatiCasopise" prefHeight="25.0" prefWidth="133.0" text="Dohvati casopise" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0" text="Naziv casopisa : " />
+                  <TextField fx:id="nazivCasopisa" prefHeight="25.0" prefWidth="334.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+   	<Pane>
+      <children>
+         <TableView fx:id="casopisTable" prefHeight="332.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <columns>
+             <TableColumn fx:id="nazivCasopisaColumn" prefWidth="109.0" text="Naziv casopisa" />
+             <TableColumn fx:id="godinaCasopisaColumn" prefWidth="103.0" text="Godina" />
+               <TableColumn fx:id="mjesecCasopisaColumn" prefWidth="111.0" text="Mjesec" />
+               <TableColumn fx:id="vrstaCasopisaColumn" prefWidth="121.0" text="Vrsta casopisa" />
+               <TableColumn fx:id="brojStranicaCasopisaColumn" prefWidth="155.0" text="Broj stranica" />
+           </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#obrisi" text="Obrisi oznacene" />
+                      <MenuItem mnemonicParsing="false" onAction="#uredi" text="Uredi oznaceni" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+         </TableView>
+      </children>
+      </Pane>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,6 @@
+#Osnovni podaci za spajanje na bazu podataka
+bazaPodatakaUrl = jdbc:h2:tcp://localhost/~/Java-2014
+
+#Podaci za pristupanje bazi podataka
+korisnickoIme = metlina
+lozinka = tinko5

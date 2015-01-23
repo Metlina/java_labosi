@@ -1,0 +1,25 @@
+package hr.tvz.java.vjezbe.visenitnost;
+
+import javafx.application.Platform;
+import javafx.scene.control.Label;
+
+public class VisenitnostHelper {
+
+	public static void setLabelText(Label lbl, String text) {
+		Platform.runLater(new Runnable() {
+			@Override
+			public void run() {
+				lbl.setText(text);
+			}
+		});
+	}
+	
+	public static void nitPauza(Integer sekunda)
+	{
+		try {
+			Thread.sleep(sekunda);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}	
+}

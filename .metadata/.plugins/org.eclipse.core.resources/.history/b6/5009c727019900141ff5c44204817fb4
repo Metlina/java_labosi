@@ -1,0 +1,22 @@
+package hr.tvz.java.vjezbe.visenitnost;
+
+import java.util.concurrent.ExecutorService;
+
+import javafx.scene.control.Label;
+
+public class BrojCasopisaNit implements Runnable {
+
+	private Label label;
+	private ExecutorService executorService;
+	
+	public BrojCasopisaNit(Label label, ExecutorService executorService)
+	{
+		this.label = label;
+		this.executorService = executorService;
+	}
+
+	@Override
+	public void run() {
+		
+	}
+}
